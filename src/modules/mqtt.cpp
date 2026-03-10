@@ -52,7 +52,7 @@ namespace MQTT {
             Serial.println("Suscrito al tópico: " + topic);
             return true;
         }
-         
+        
         Serial.print("Fallo con el estado: ");
         Serial.println(mqttClient.state());
         return false;

@@ -2,9 +2,7 @@
 #include "modules/mqtt.h"
 #include "modules/displayNextion.h"
 #include "modules/utils.h"
-
 #include "modules/display.h"
-
 #include "sensors/ad8232.h"
 #include "sensors/ds18b20.h"
 #include "sensors/gy906.h"
@@ -39,12 +37,12 @@ void scanI2C() {
 
 
 bool isTimerExpired(unsigned long &lastUpdate, uint32_t interval) {
-  unsigned long currentMillis = millis();
-  if (currentMillis - lastUpdate >= interval) {
+    unsigned long currentMillis = millis();
+    if (currentMillis - lastUpdate >= interval) {
     lastUpdate = currentMillis; 
     return true;
-  }
-  return false;
+    }
+    return false;
 }
 
 void setup() {
